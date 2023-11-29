@@ -1,7 +1,9 @@
 # Valorant-Object-Detection
 Object detection for Valorant with YOLO models
 
-# Table of Contents
+Built using [YOLOv8n and YOLOv8x](https://github.com/ultralytics/ultralytics), simply choose a file in the application window and it will return the image or video with it's predictions shown.
+
+## Table of Contents
 1. [Installation & Requirements](#installation--requirements)
    - [Running with TensorRT](#running-with-tensorrt)
    - [Clone the Repo](#clone-the-repo)
@@ -17,8 +19,6 @@ Object detection for Valorant with YOLO models
      - [Video Extensions](#video-extensions)
 5. [Settings](#settings)
 6. [Training, Tests, and Comparison](#training-tests-and-comparison)
-
-Built using [YOLOv8n and YOLOv8x](https://github.com/ultralytics/ultralytics), simply choose a file in the application window and it will return the image or video with it's predictions shown.
 
 Snippet from [Inference Test](#training-tests-and-comparison)\
 ![model-in-action](https://github.com/alexromain/Valorant-Object-Detection/assets/73396089/bca829fc-9521-432e-9117-293db21e5f90)
