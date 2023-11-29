@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/vars.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.0"></script>
+    <script type="text/javascript" src="js/tailwind.config.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+        a,
+        button,
+        input,
+        select,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            appearance: none;
+            background: none;
+
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+    <title>YOLO | Valorant Info</title>
+</head>
+
+<body>
+    <main class="flex flex-col items-center justify-between w-[550px] h-[600px] relative">
+        <div class="bg-[#333333] self-stretch flex-1 relative"></div>
+        <button onclick="window.location.href='main.html'" class="shrink-0 w-[38.57px] h-[34.62px] absolute right-[86.62%] left-[6.36%] w-[7.01%] bottom-[87.9%] top-[6.33%] h-[5.77%] overflow-visible">
+            <svg style="" width="39" height="35" viewBox="0 0 39 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M19.2844 0L0 14.8383H4.8211V34.6227H14.4633V24.7305H24.1055V34.6227H33.7477V14.6899L38.5688 14.8383L19.2844 0Z"
+                    fill="white" fill-opacity="0.8" />
+            </svg>
+        </button>        
+
+        <div class="flex flex-col items-center justify-between shrink-0 h-[117px] absolute left-[77px] top-0">
+            <img class="shrink-0 w-[255.75px] h-[76px] relative" src="yolo-image.png" />
+            <div class="text-[#ffffff] text-center relative flex-1 w-[397.38px]" style="
+            font: 200 italic 23px/24px 'Roboto-ExtraLightItalic', sans-serif;
+          ">
+                Valorant Object Detection
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center justify-between shrink-0 w-[504px] h-[460px] absolute left-[23px] top-[117px]">
+            <div class="bg-[rgba(35,35,35,0.46)] rounded-xl shrink-0 w-[504px] h-[460px] absolute left-0 top-0"
+                style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"></div>
+            <a
+                class="p-2.5 flex flex-col items-start justify-between shrink-0 w-[442px] h-[84px] absolute right-[6.15%] left-[6.15%] w-[87.7%] bottom-[76.74%] top-[5%] h-[18.26%]">
+                <div class="text-[#ffffff] text-center absolute left-0 top-0 w-[442px] h-[31px]"
+                    style="font: 700 16px 'Inter-Bold', sans-serif">
+                    •Width and Height•
+                </div>
+                <div class="text-[#ffffff] text-left absolute left-0 top-[31px] w-[442px]"
+                    style="font: 200 16px/110% 'Roboto-ExtraLight', sans-serif">
+                    If no sizing is put into the Width or Height box, the resolution of
+                    your original image or video will be used.
+                </div>
+                <div class="text-[#ffffff] text-left absolute left-0 top-[69px] w-[442px] flex items-center justify-start"
+                    style="font: 200 14px/110% 'Roboto-ExtraLight', sans-serif">
+                    Recommended to 640x640 for most accurate results.
+                </div>
+            </a><a
+                class="p-2.5 flex flex-col items-start justify-between shrink-0 w-[442px] h-[82px] absolute right-[6.15%] left-[6.15%] w-[87.7%] bottom-[55.22%] top-[26.96%] h-[17.83%]">
+                <div class="text-[#ffffff] text-center absolute left-0 top-0 w-[442px] h-[31px]"
+                    style="font: 700 16px 'Inter-Bold', sans-serif">
+                    •Frame-rate and Confidence•
+                </div>
+                <div class="text-[#ffffff] text-left absolute left-0 top-[31px] w-[442px] h-9"
+                    style="font: 200 16px/110% 'Roboto-ExtraLight', sans-serif">
+                    The frame-rate will be how the video is sent to the model, so the
+                    model will render with that frame-rate.
+                </div>
+                <div class="text-[#ffffff] text-left absolute left-0 top-[67px] w-[442px] flex items-center justify-start"
+                    style="font: 200 14px/110% 'Roboto-ExtraLight', sans-serif">
+                    Recommended to leave default.
+                </div>
+            </a><a
+                class="p-2.5 flex flex-col gap-2.5 items-start justify-start shrink-0 w-[442px] h-[63px] absolute right-[6.15%] left-[6.15%] w-[87.7%] bottom-[38.7%] top-[47.61%] h-[13.7%]">
+                <div class="text-[#ffffff] text-center absolute left-0 top-0 w-[442px] h-[31px]"
+                    style="font: 700 16px 'Inter-Bold', sans-serif">
+                    •How to Upload•
+                </div>
+                <div class="text-[#ffffff] text-left absolute left-0 top-[31px] w-[442px] h-8"
+                    style="font: 200 16px/110% 'Roboto-ExtraLight', sans-serif">
+                    Click the ‘Upload Folder’ button and put any image or video in
+                    there.
+                </div>
+            </a><a
+                class="p-2.5 flex flex-col gap-2.5 items-start justify-start shrink-0 w-[442px] h-[124px] absolute right-[6.15%] left-[6.15%] w-[87.7%] bottom-[8.04%] top-[65%] h-[26.96%]">
+                <div class="text-[#ffffff] text-center absolute left-0 top-0 w-[442px] h-[31px]"
+                    style="font: 700 16px 'Roboto-Bold', sans-serif">
+                    •Supported Filetypes•
+                </div>
+                <div
+                    class="text-[#ffffff] text-left absolute left-0.5 top-[31px] w-[440px] h-9 flex items-center justify-start">
+                    <span><span class="content-4-span">Images: </span><span class="content-4-span2">[&#039;.bmp&#039;,
+                            &#039;.dng&#039;, &#039;.jpeg&#039;,
+                            &#039;.jpg&#039;, &#039;.mpo&#039;, &#039;.png&#039;,
+                            &#039;.tif&#039;, &#039;.tiff&#039;, &#039;.webp&#039;,
+                            &#039;.pfm&#039;]</span></span>
+                </div>
+                <div
+                    class="text-[#ffffff] text-left absolute left-0 top-[67px] w-[442px] h-[57px] flex items-center justify-start">
+                    <span><span class="content-5-span">Videos:</span><span class="content-5-span2">
+                            [&#039;.asf&#039;, &#039;.avi&#039;, &#039;.gif&#039;,
+                            &#039;.m4v&#039;, &#039;.mkv&#039;, &#039;.mov&#039;,
+                            &#039;.mp4&#039;, &#039;.mpeg&#039;, &#039;.mpg&#039;,
+                            &#039;.ts&#039;, &#039;.wmv&#039;, &#039;.webm&#039;]</span></span>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>

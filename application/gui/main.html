@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/vars.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com/3.2.0"></script>
+  <script type="text/javascript" src="js/tailwind.config.js"></script>
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <style>
+    a,
+    button,
+    input,
+    select,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      appearance: none;
+      background: none;
+
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+  <title>YOLO | Valorant</title>
+</head>
+
+<body>
+  <main class="flex flex-row items-start justify-between w-[550px] h-[600px] relative">
+    <div class="bg-[#333333] self-stretch flex-1 relative"></div>
+    <div class="flex flex-col items-start justify-between self-stretch shrink-0 absolute left-4 top-[300px]">
+      <div class="bg-[rgba(35,35,35,0.46)] rounded-xl shrink-0 w-[249px] h-[255px] relative"
+        style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"></div>
+      <h1 class="text-[#ffffff] text-left absolute left-0 top-0 w-[249px] h-6"
+        style="font: 400 15px/150% 'Roboto-Regular', sans-serif; opacity: 0.5">
+        Settings
+      </h1>
+      <div
+        class="pr-[25px] pl-[25px] flex flex-col items-end justify-between shrink-0 w-[249px] h-[35px] absolute left-0 top-[85px]">
+        <a class="text-[#ffffff] text-center absolute right-[44.58%] left-[0%] w-[55.42%] bottom-[5%] top-[60%] h-[35%] w-[138px] h-[12.25px]"
+          style="font: 300 10px/150% 'Roboto-Light', sans-serif; opacity: 0.5">
+          Recommended to leave empty </a><a
+          class="text-[#ffffff] text-center absolute left-0 top-0 w-[138px] h-6 flex items-end justify-center"
+          style="font: 400 12px/16.5px 'Roboto-Regular', sans-serif">
+          Frame rate
+        </a>
+        <div
+          class="bg-[#f5f5f5] rounded flex flex-col items-start justify-between shrink-0 w-[86px] h-[35px] absolute right-[10.04%] left-[55.42%] w-[34.54%] bottom-[0%] top-[0%] h-[100%] overflow-hidden">
+          <input id="frame-rate" type="number"
+            class="text-[rgba(0,0,0,0.50)] text-center relative w-[86px] h-[34px] flex items-center justify-center"
+            style="font: 400 12px/16.5px 'Roboto-Regular', sans-serif" placeholder="Default" />
+        </div>
+      </div>
+      <div
+        class="pr-[25px] pl-[25px] flex flex-col items-end justify-between shrink-0 w-[249px] h-[35px] absolute left-0 top-[134px]">
+        <a class="text-[#ffffff] text-center absolute left-0 top-0 w-[138px] h-[19px] flex items-end justify-center"
+          style="font: 400 12px/16.5px 'Roboto-Regular', sans-serif">
+          Confidence
+        </a>
+        <div
+          class="bg-[#f5f5f5] rounded flex flex-col items-start justify-between shrink-0 w-[86px] h-[35px] relative overflow-hidden">
+          <input id="conf" type="number"
+            class="text-[rgba(0,0,0,0.50)] text-center relative w-[86px] h-[34px] flex items-center justify-center"
+            style="font: 400 12px/16.5px 'Roboto-Regular', sans-serif" placeholder="0.4" />
+        </div>
+        <a class="text-[#ffffff] text-center absolute right-[44.58%] left-[0%] w-[55.42%] bottom-[0%] top-[54.29%] h-[45.71%] w-[138px] h-4"
+          style="font: 300 10px/150% 'Roboto-Light', sans-serif; opacity: 0.5">
+          Default is 0.4
+        </a>
+      </div>
+      <div
+        class="pr-[25px] pl-[25px] flex flex-col items-end justify-between shrink-0 w-[249px] h-10 absolute left-0 top-8">
+        <a class="text-[#ffffff] text-center absolute right-[44.58%] left-[0%] w-[55.42%] bottom-[5%] top-[60%] h-[35%] w-[138px] h-3.5"
+          style="font: 300 10px/150% 'Roboto-Light', sans-serif; opacity: 0.5">
+          640x640 for best results </a><a
+          class="text-[#ffffff] text-center absolute left-0 top-0 w-[138px] h-6 flex items-end justify-center"
+          style="font: 400 12px/16.5px 'Roboto-Regular', sans-serif">
+          Width x Height
+        </a>
+        <div
+          class="bg-[#f5f5f5] rounded flex flex-col items-start justify-between shrink-0 w-[86px] h-[18px] absolute right-[10.04%] left-[55.42%] w-[34.54%] bottom-[55%] top-[0%] h-[45%] overflow-hidden">
+          <input id="width" type="number"
+            class="text-[rgba(0,0,0,0.50)] text-center relative w-[86px] h-[17px] flex items-center justify-center"
+            style="font: 400 12px/16.5px 'Roboto-Regular', sans-serif" placeholder="Width" />
+        </div>
+        <div
+          class="bg-[#f5f5f5] rounded flex flex-col items-start justify-between shrink-0 w-[86px] h-[18px] absolute right-[10.04%] left-[55.42%] w-[34.54%] bottom-[0%] top-[55%] h-[45%] overflow-hidden">
+          <input id="height" type="number"
+            class="text-[rgba(0,0,0,0.50)] text-center relative w-[86px] h-[18px] flex items-center justify-center"
+            style="font: 400 12px/16.5px 'Roboto-Regular', sans-serif" placeholder="Height" />
+        </div>
+      </div>
+      <div class="flex flex-row items-start justify-between shrink-0 w-[249px] h-[62px] absolute left-0 top-[194px]">
+        <div
+          class="rounded-[5px] border-solid border-[#ffffff] border pr-4 pl-4 flex flex-row items-center justify-between shrink-0 w-[87px] h-[38px] absolute right-[56.22%] left-[8.84%] w-[34.94%] bottom-[38.71%] top-[0%] h-[61.29%]"
+          style="
+              box-shadow: var(
+                --blur-box-shadow,
+                -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+              );
+            ">
+          <button onclick="setSettings()"
+            class="text-[#ffffff] text-center relative self-stretch flex-1 flex items-center justify-center"
+            style="font: 700 10px 'Inter-Bold', sans-serif">
+            Apply
+          </button>
+        </div>
+        <p id="settings-message"
+          class="text-[#ffffff] text-center absolute right-[0%] left-[0%] w-[100%] bottom-[0%] top-[76.75%] h-[23.25%] w-[249px] h-[14.42px] flex items-center justify-center"
+          style="font: 300 10px/100% 'Roboto-Light', sans-serif; opacity: 0.5">
+          <!-- settingsMessage -->
+        </p>
+        <div
+          class="rounded-[5px] border-solid border-[#ffffff] border pr-4 pl-4 flex flex-row items-center justify-between shrink-0 w-[87px] h-[38px] absolute right-[10.04%] left-[55.02%] w-[34.94%] bottom-[38.71%] top-[0%] h-[61.29%]"
+          style="
+              box-shadow: var(
+                --blur-box-shadow,
+                -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+              );
+            ">
+          <button onclick="resetSettings()"
+            class="text-[#ffffff] text-center relative self-stretch flex-1 flex items-center justify-center"
+            style="font: 700 10px 'Inter-Bold', sans-serif">
+            RESET
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[rgba(217,217,217,0.00)] pt-[11px] flex flex-row items-start justify-between flex-wrap self-stretch shrink-0 w-[223px] absolute left-[311px] top-[472px]">
+      <div
+        class="pt-2.5 pr-2.5 pb-[9px] pl-2.5 flex flex-row gap-2.5 items-start justify-start shrink-0 w-56 absolute left-0 top-0">
+        <div class="text-[#ffffff] text-left absolute left-32 top-0 w-24 h-2" style="
+              font: 400 10px/100% 'Roboto-CondensedExtraLight', sans-serif;
+              opacity: 0.5;
+            ">
+          Large Model
+        </div>
+        <div class="text-[#ffffff] text-left absolute left-0 top-0 w-24 h-2" style="
+              font: 400 10px/100% 'Roboto-CondensedExtraLight', sans-serif;
+              opacity: 0.5;
+            ">
+          Light Model
+        </div>
+      </div>
+      <button onclick="pickYOLOv8n()"
+        class="rounded border-solid border-[#ffffff] border pt-[3px] pr-1 pb-[3px] pl-2 flex flex-row gap-0.5 items-center justify-center shrink-0 w-[96.25px] h-8 relative"
+        style="
+            box-shadow: var(
+              --blur-box-shadow,
+              -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+            );
+          ">
+        <div class="text-[#ffffff] text-center absolute left-[7px] top-1 w-14 h-4 flex items-center justify-center"
+          style="font: 100 14px/24px 'Roboto-Thin', sans-serif">
+          YOLOv8n
+        </div>
+      </button><button onclick="pickYOLOv8x()"
+        class="rounded border-solid border-[#ffffff] border pt-[3px] pr-1 pb-[3px] pl-2 flex flex-row gap-0.5 items-center justify-center shrink-0 w-[96.25px] h-8 relative"
+        style="
+            box-shadow: var(
+              --blur-box-shadow,
+              -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+            );
+          ">
+        <div class="text-[#ffffff] text-center absolute left-[7px] top-1 w-14 h-4 flex items-center justify-center"
+          style="font: 100 14px/24px 'Roboto-Thin', sans-serif">
+          YOLOv8x
+        </div>
+      </button><!-- Add path --><button onclick="window.location.href='information.html'"
+        class="rounded border-solid border-[#ffffff] border pt-[3px] pr-1 pb-[3px] pl-2 flex flex-row gap-0.5 items-center justify-center shrink-0 w-[222.75px] h-[53.33px] relative"
+        style="
+            box-shadow: var(
+              --blur-box-shadow,
+              -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+            );
+          ">
+        <div class="text-[#ffffff] text-center absolute left-[11px] top-2 flex items-center justify-center"
+          style="font: 100 23px/24px 'Roboto-Thin', sans-serif">
+          Information
+        </div>
+        <svg class="shrink-0 w-3 h-[13px] absolute left-[140px] top-3.5 overflow-visible" style="" width="12"
+          height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 1L9 6L4 11" stroke="white" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <a class="flex flex-col items-start justify-between shrink-0 w-[225px] h-32 absolute left-[309px] top-[301px]">
+      <div class="flex flex-col items-center justify-between shrink-0 h-[52px] relative">
+        <div
+          class="rounded-[5px] border-solid border-[#ffffff] border flex flex-row items-center justify-between shrink-0 w-[222.75px] h-[52px] relative"
+          style="
+              box-shadow: var(
+                --blur-box-shadow,
+                -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+              );
+            ">
+          <button onclick="openResults()"
+            class="text-[#ffffff] text-center relative self-stretch flex-1 flex items-center justify-center"
+            style="font: 300 19px 'Roboto-Light', sans-serif">
+            Results Folder
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-col items-center justify-between shrink-0 h-[52px] relative" style="margin: -77px 0 0 0">
+        <div
+          class="rounded-[5px] border-solid border-[#ffffff] border flex flex-row items-center justify-between shrink-0 w-[222.75px] h-[52px] relative"
+          style="
+              box-shadow: var(
+                --blur-box-shadow,
+                -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+              );
+            ">
+          <button onclick="openUpload()"
+            class="text-[#ffffff] text-center relative self-stretch flex-1 flex items-center justify-center"
+            style="font: 300 19px 'Roboto-Light', sans-serif">
+            Upload Folder
+          </button>
+        </div>
+      </div>
+    </a>
+    <div class="flex flex-col items-start justify-between shrink-0 w-[520px] h-[47px] absolute left-3 top-[225px]">
+      <button onclick="uploadFile()"
+        class="rounded border-solid border-[#ffffff] border pt-[3px] pb-[3px] flex flex-row gap-0 items-center justify-start shrink-0 w-[223px] h-[47px] absolute left-[297px] top-0"
+        style="
+            box-shadow: var(
+              --blur-box-shadow,
+              -2px 4px 5.7px 0px rgba(0, 0, 0, 0.63)
+            );
+          ">
+        <div class="text-[#ffffff] text-center relative self-stretch w-[211px] flex items-center justify-center"
+          style="font: 400 12px/16px 'Roboto-Regular', sans-serif">
+          Upload
+        </div>
+        <svg
+          class="pt-px pr-[3px] pb-px pl-[3px] flex flex-col gap-2.5 items-center justify-center shrink-0 h-[auto] absolute left-[132px] top-[18px] overflow-visible"
+          style="" width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_6_71)">
+            <path d="M9 3L14 8L9 13" stroke="white" stroke-linejoin="round" />
+          </g>
+          <defs>
+            <filter id="filter0_d_6_71" x="-1.7" y="0.3" width="22.4" height="23.4" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dx="-2" dy="4" />
+              <feGaussianBlur stdDeviation="2.85" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.63 0" />
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_6_71" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_6_71" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+      </button>
+      <div class="flex flex-col gap-0 items-start justify-center shrink-0 w-32 h-[47px] relative">
+        <div class="text-[#ffffff] text-left relative w-32" style="font: 300 18px/24px 'Roboto-Light', sans-serif">
+          Choose File
+        </div>
+        <div class="text-[rgba(255,255,255,0.50)] text-left relative w-32"
+          style="font: 400 12px/16px 'Roboto-Regular', sans-serif">
+          Select a file to upload
+        </div>
+      </div>
+      <div
+        class="relative bg-[#3a3a3a] rounded-md flex items-center justify-center shrink-0 w-[124px] h-[47px] absolute left-32 top-0"
+        style="top: -45px;">
+        <a class="absolute text-white text-center"
+          style="font: 400 12px 'Inter-Regular', sans-serif; width: 100%; top: 50%; transform: translateY(-50%);">Click
+          Here</a>
+          <input type="file" id="fileInput" class="opacity-0 absolute w-full h-full cursor-pointer">
+      </div>
+    </div>
+    <div class="flex flex-col items-start justify-between self-stretch shrink-0 absolute left-0 top-[117px]">
+      <div class="bg-[rgba(217,217,217,0.00)] shrink-0 w-[200px] h-[66px] relative"
+        style="opacity: 0.10000000149011612"></div>
+      <p id="message" class="text-[#ffffff] text-left relative flex-1 w-[270.88px] flex items-end justify-start"
+        style="font: 300 10px/100% 'Roboto-Light', sans-serif; opacity: 0.5"> 
+        <!-- message -->
+      </p>
+    </div>
+    <div class="flex flex-col items-center justify-between self-stretch shrink-0 absolute left-[77px] top-2">
+      <img class="shrink-0 w-[255.75px] h-[76px] relative" src="yolo-image.png" />
+      <div class="text-[#ffffff] text-center relative flex-1 w-[397.38px]" style="
+            font: 200 italic 23px/24px 'Roboto-ExtraLightItalic', sans-serif;
+          ">
+        Valorant Object Detection
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

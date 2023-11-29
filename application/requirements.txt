@@ -1,0 +1,9 @@
+Eel==0.16.0
+ultralytics==8.0.215
+opencv-python==4.8.1.78
+onnx==1.15.0
+Pillow==10.1.0
+matplotlib==3.7.4
+pandas==2.0.3
+numpy==1.24.4
+

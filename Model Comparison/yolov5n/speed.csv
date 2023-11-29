@@ -1,0 +1,5 @@
+Speed Metrics,
+preprocess,0.2ms
+inference,2.6ms
+loss,0.0ms
+postprocess,0.8ms
