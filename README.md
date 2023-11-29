@@ -1,6 +1,23 @@
 # Valorant-Object-Detection
 Object detection for Valorant with YOLO models
 
+# Table of Contents
+1. [Installation & Requirements](#installation--requirements)
+   - [Running with TensorRT](#running-with-tensorrt)
+   - [Clone the Repo](#clone-the-repo)
+2. [Application Setup](#application)
+   - [Brave-Portable](#brave-portable)
+   - [Chrome or Edge](#chrome-or-edge)
+   - [Model Downloads](#model-downloads)
+   - [Using the PyTorch Models](#using-the-pytorch-models)
+3. [Usage](#usage)
+   - [Using the Application](#using-the-application)
+   - [Supported File Extensions](#supported-file-extensions)
+     - [Image Extensions](#image-extensions)
+     - [Video Extensions](#video-extensions)
+5. [Settings](#settings)
+6. [Training, Tests, and Comparison](#training-tests-and-comparison)
+
 Built using [YOLOv8n and YOLOv8x](https://github.com/ultralytics/ultralytics), simply choose a file in the application window and it will return the image or video with it's predictions shown.
 
 Snippet from [Inference Test](#training-tests-and-comparison)\
@@ -26,10 +43,6 @@ See [CUDA docs](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-w
 > Check the Nvidia [GPU Compatibility](https://developer.nvidia.com/cuda-gpus) list.\
 > **You need to install [PyTorch](https://pytorch.org/get-started/locally/) whether you're using TensorRT or not.**
 
-## Application
-
-For the application GUI, [Eel](https://github.com/python-eel/Eel) was used with [Brave Portable](https://github.com/portapps/brave-portable), but you can use [Chrome or Edge](#chrome-or-edge).\
-
 ## Clone the Repo
 
 ```bash
@@ -45,6 +58,10 @@ pip install -r requirements.txt
 ```
 
 After cloning the repository and installing the [requirements](#installation%20&%20requirements) go to the `application/` directory.
+
+# Application
+
+For the application GUI, [Eel](https://github.com/python-eel/Eel) was used with [Brave Portable](https://github.com/portapps/brave-portable), but you can use [Chrome or Edge](#chrome-or-edge).\
 
 ## Brave-Portable 
 
@@ -100,7 +117,7 @@ Due to the filesize of the models, the files are uploaded to google drive.
 - [TensorRT models](https://drive.google.com/file/d/1W6MqDa16iCergzbECxWLFKpljVXj98Be/view?usp=drive_link)
 - [Torch models](https://drive.google.com/file/d/1K93_K6D4F4GEghfWEQkOaZBcG0p9hRxG/view?usp=drive_link)
 
-Skip this if you are not using TensorRT. [Go here instead](#using%20the%20pytorch%20models)
+Skip this if you are not using TensorRT. [Go here instead](#using-the-pytorch-models)
 
 The TensorRT models need to be placed in the [`application/model/`](application/model) directory.
 
@@ -147,14 +164,16 @@ The GUI should show up!
 
 ![Capture](https://github.com/alexromain/Valorant-Object-Detection/assets/73396089/8ee83fbc-2fa0-45b6-9d3a-da40fbdb4146)
 
-To give the model an image or video, first check if the image format is [compatible with the model](#imageextensions), YOLO supports a wide range of formats so that shouldn't be an issue.
+#### Using the Application
+
+To give the model an image or video, first check if the image format is [compatible with the model](#supported-file-extensions), YOLO supports a wide range of formats so that shouldn't be an issue.
 
 After that, simply click 'Click Here' to choose a file.
 
 > [!IMPORTANT]
 > Files you want the model to take in have to be put in the [`application/upload`](application/upload) folder!\
 > For the best results, use **640x640** under [Settings](#settings). These YOLO models were trained on a [dataset](#i-used-this-huggingface-dataset-to-train-the-model) that was 416x416,
-but the pre-trained [YOLOv8 models](https://github.com/ultralytics/ultralytics) are trained on **640x640**, so they perform better at that resolution.
+but the pre-trained YOLOv8 models are trained on **640x640**, so they perform better at that resolution.
 
 Once the model has completed its process, see the results by clicking `Results Folder`.
 
