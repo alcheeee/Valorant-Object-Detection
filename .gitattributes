@@ -1,2 +1,4 @@
 *.ipynb linguist-vendored
+*.html linguist-vendored
+*.css linguist-vendored
 *.py linguist-vendored=false
